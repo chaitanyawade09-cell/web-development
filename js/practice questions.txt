@@ -1,0 +1,220 @@
+## Lesson 1: Variables, Data Types, and Basic Arithmetic
+
+1. **The Shopping Cart Calculator (Handling Decimals)**
+* **Goal:** Write a program to calculate the total cost of an item, including tax, while avoiding potential floating-point errors.
+* **Instructions:**
+* Create two variables, `productCost` (set to `5.49`) and `taxRate` (set to `0.10`).
+* Calculate the total cost by converting the dollar amounts to **cents** first, performing the calculation, and then converting the final result back to dollars.
+* Log the final `totalCost` (in dollars) to the console.
+
+
+
+
+2. **The Constant ID**
+* **Goal:** Demonstrate the proper use of the `const` keyword.
+* **Instructions:**
+* Declare a variable `USER_ID` using `const` and set its value to a number (e.g., `1001`).
+* Try to reassign `USER_ID` to a new number in the next line.
+* Observe the error in your browser's console and explain in a code comment why the error occurred.
+
+
+
+
+3. **Temperature Converter**
+* **Goal:** Practice basic arithmetic operations and variable assignment.
+* **Instructions:**
+* Create a variable `celsiusTemp` and set it to a value (e.g., `30`).
+* Write a formula to convert Celsius to Fahrenheit: .
+* Store the result in a new variable `fahrenheitTemp`.
+* Use `console.log()` to print a clear statement showing both the Celsius and Fahrenheit values.
+
+
+
+
+
+---
+
+## Lesson 2: Strings and Template Literals
+
+1. **Product Summary Generator**
+* **Goal:** Master the use of string interpolation (template literals) for cleaner string creation.
+* **Instructions:**
+* Create variables: `productName` (`'Smartphone'`), `productPrice` (`599.99`), and `sellerName` (`'TechMart'`).
+* Use a **template literal** (with backticks ``) to create a single string variable, `summary`, that reads:
+> "The Smartphone from TechMart is now available for $599.99."
+
+
+* Log the `summary` to the console.
+
+
+
+
+2. **String Method Practice**
+* **Goal:** Apply built-in string methods.
+* **Instructions:**
+* Create a string variable `message` with the value `'  Welcome to the course!  '`.
+* In a single line of code, chain the `.trim()` method to remove leading/trailing spaces and then the `.toUpperCase()` method to convert the entire string to uppercase.
+* Log the final processed string.
+
+
+
+
+3. **Basic Concatenation**
+* **Goal:** Use the `+` operator to combine multiple strings.
+* **Instructions:**
+* Create three variables: `firstName`, `lastName`, and `greetingPrefix`. Assign them short string values.
+* Use the `+` operator and a space literal (`' '`) to combine them into a single variable `fullGreeting`.
+* Log `fullGreeting` to the console.
+
+
+
+
+
+---
+
+## Lesson 3: If Statements and Conditionals
+
+1. **Age Verification**
+* **Goal:** Use a simple `if-else` block to control flow based on a single condition.
+* **Instructions:**
+* Create a variable `age` and set it to a number.
+* Write an `if-else` statement to check if the `age` is greater than or equal to `18`.
+* If true, log: `"Access granted: You are an adult."`
+* If false, log: `"Access denied: You are a minor."`
+
+
+
+
+2. **Letter Grade Assignment**
+* **Goal:** Implement a multi-branch `if-else if-else` chain.
+* **Instructions:**
+* Create a variable `score` and set it to a value between 0 and 100.
+* Write a conditional structure to assign a letter grade based on these rules:
+* 90 and above: 'A'
+* 80 to 89: 'B'
+* 70 to 79: 'C'
+* Below 70: 'F'
+
+
+* Log the resulting letter grade.
+
+
+
+
+3. **Permission Check**
+* **Goal:** Utilize logical operators (`&&` or `||`).
+* **Instructions:**
+* Create two boolean variables: `isAdmin` and `isSuperUser`. Set one to `true` and one to `false`.
+* Write an `if` statement using the **OR** operator (`||`) to check if the user is *either* an admin or a super user.
+* If the condition is met, log: `"Full dashboard access granted."`
+* If the condition is not met, log: `"Limited view access only."`
+
+
+
+
+
+---
+
+## Lesson 4: Functions
+
+1. **Area Calculator Function**
+* **Goal:** Define a function that takes arguments, performs a calculation, and returns a value.
+* **Instructions:**
+* Create a function named `calculateArea` that accepts two parameters: `width` and `height`.
+* Inside the function, calculate the area (`width * height`).
+* Use the `return` keyword to send the calculated area back to the caller.
+* Call the function twice with different arguments and log both results.
+
+
+
+
+2. **Default Parameter Greeting**
+* **Goal:** Use a default parameter value in a function definition.
+* **Instructions:**
+* Create a function named `personalGreeting` that accepts one parameter: `name`.
+* Set the default value for `name` to `'Valued Customer'`.
+* The function should return a personalized greeting string (e.g., `"Hello, [Name]!"`).
+* Call the function once with a name and once **without** any arguments, logging both outcomes.
+
+
+
+
+3. **Basic Function for Console Logging**
+* **Goal:** Write a simple function that executes multiple steps.
+* **Instructions:**
+* Define a function named `printInstructions`. It should take no arguments.
+* Inside the function, use `console.log()` three times to print out a short, step-by-step instruction set (e.g., "Step 1: Click the button.", "Step 2: Enter your data.", "Step 3: Submit the form.").
+* Call the `printInstructions` function to execute the steps.
+
+
+
+
+
+---
+
+## Lesson 5: Arrays and Loops
+
+1. **Sum of Array Values**
+* **Goal:** Use a `for` loop to iterate and aggregate data from an array.
+* **Instructions:**
+* Create an array `expenses` with at least five numbers (your monthly expenses).
+* Initialize a variable `totalExpenses` to `0`.
+* Use a `for` loop to iterate through the `expenses` array, adding each expense to `totalExpenses`.
+* After the loop finishes, log the final `totalExpenses`.
+
+
+
+
+2. **Shopping List with `forEach**`
+* **Goal:** Practice using the `.forEach()` array method.
+* **Instructions:**
+* Create an array `shoppingList` with five strings (e.g., 'Milk', 'Eggs', 'Bread').
+* Use the `forEach()` method to iterate over the array.
+* Inside the callback function, use `console.log()` to print a line for each item, like: `"Don't forget to buy: [Item Name]"`.
+
+
+
+
+3. **Filtering High-Priced Items**
+* **Goal:** Use the `.filter()` method to create a new array based on a condition.
+* **Instructions:**
+* Create an array of objects called `inventory`. Each object should have a `name` and a `price` property (e.g., `{ name: 'Laptop', price: 1200 }`).
+* Use the `.filter()` method to create a new array, `premiumItems`, that only includes items where the `price` is greater than or equal to `1000`.
+* Log the `premiumItems` array.
+
+
+
+
+
+---
+
+## Lesson 6: Asynchronous Code and Promises
+
+1. **Basic Promise Implementation**
+* **Goal:** Create and handle a simple Promise to simulate an asynchronous operation.
+* **Instructions:**
+* Write a function `fetchUserData()` that returns a new `Promise`.
+* The Promise should use `setTimeout` to wait for **1500 milliseconds (1.5 seconds)**.
+* After the delay, the Promise should call `resolve()` with the string `"User data retrieved."`
+* Call `fetchUserData()` and use the `.then()` method to log the resolved message.
+
+
+
+
+2. **`async`/`await` for Clean Code**
+* **Goal:** Rewrite the Promise handling using the modern `async`/`await` syntax.
+* **Instructions:**
+* Keep the `fetchUserData()` function from Problem 1.
+* Create a new `async` function called `displayData()`.
+* Inside `displayData()`, use the `await` keyword to wait for the result of `fetchUserData()`.
+* Store the result in a variable and `console.log` it.
+* Call `displayData()`.
+
+
+
+
+3. **Conceptual Understanding**
+* **Goal:** Articulate the practical benefit of Promises and `async`/`await`.
+* **Instructions:**
+* Above the `displayData()` function from Problem 2, write a multi-line code comment.
+* In the comment, explain in your own words what **Callback Hell** is (the problem that used to happen with nested callbacks) and how Promises (and subsequently `async`/`await`) fixed that problem.
