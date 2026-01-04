@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(11, 0, 15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: black;
+    padding: 0.8% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 50px 500px rgb(50, 0, 66);
+}
+
+.logo>a {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(191, 0, 255);
+}
+
+header ul {
+    display: flex;
+    gap: 25px;
+}
+
+header ul a {
+    color: white;
+    margin: 0 15px;
+    padding: 1px;
+    border-bottom: 2px solid black;
+    transition: 0.3s ease-in-out;
+}
+
+header ul a:hover {
+    color: rgb(98, 0, 131);
+    border-bottom: 2px solid rgb(98, 0, 131);
+}
+
+main{
+    padding-bottom: 40px;
+    /* border-bottom: 1px solid rgb(98, 0, 131); */
+    
+}
+
+main .heading .heading1 {
+    position: relative;
+    width: 100%;
+    font-size: 15vw;
+    font-weight: 800;
+    letter-spacing: 1.6vw;
+    text-align: center;
+    color: rgb(191, 0, 255);
+    z-index: 1;
+}
+
+main .heading .pp {
+    width: 100%;
+    position: absolute;
+    top: 23px;
+    display: flex;
+    justify-content: end;
+    z-index: 2;
+}
+
+main .heading img {
+    width: 31%;;
+    padding-right: 9px;
+}
+
+.left {
+    width: 80%;
+    margin: 5px;
+}
+
+main h1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 span {
+    font-size: 45px;
+    color: rgb(98, 0, 131);
+}
+
+.left p {
+    color: rgb(102, 71, 112);
+    margin: 25px 20% 40px;
+    text-align: center;
+}
+
+.left .btnsection{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left .btnsection .morebtn, .contactbtn{
+    background-color: rgb(129, 0, 172);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 25px;
+}
+
+.left .btnsection .morebtn:hover, .contactbtn:hover{
+    /* background-color: red; */
+    box-shadow: 0 0 15px rgb(102, 1, 136);
+    
+}
+
+#About .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .containers{
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: "img boxTitle"
+    "img aboutPara"
+    "img knowMore";
+    margin: 2% 7%;
+    padding: 2%;
+    border: 1px solid rgb(129, 0, 172);
+    box-shadow: 10px 10px 10px rgb(50, 0, 66);
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.container .containers:hover{
+    transform: scale(1.03);
+}
+
+.container .containers img{
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+}
+
+.container .containers h1{
+    grid-area: boxTitle;
+    align-self: center;
+}
+
+.container .containers p{
+    grid-area: aboutPara;
+    padding: 10px 0;         
+}
+
+.container .containers .knowmorebtn{
+    grid-area: knowMore;
+    align-self: center;
+}
+
+.container .containers a{
+    background-color: rgb(129, 0, 172);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 24px;
+}
+
+.container .containers a:hover{
+    box-shadow: 0 0 15px rgb(102, 1, 136);
+}

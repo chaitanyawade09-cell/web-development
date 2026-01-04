@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0 216 86);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color:  rgb(0, 32, 8);
+    padding: 10vh 4vw;
+}
+header .logo{
+    display: flex;
+    /* height: 50px; */
+    /* margin: 2rem; */
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.headlogo img{
+    height: 3rem;
+    /* margin-right: 5px; */
+    align-content: center;
+}
+header h1{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.loginMode{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    list-style: none;
+}
+.loginMode a{
+    text-decoration: none;
+    color: white;
+    padding: 0.1rem 0;
+    border-bottom: 2px solid rgb(0, 32, 8);
+    transition: 0.3s ease-in-out;
+}
+.loginMode a:hover{
+    border-bottom: 2px solid rgb(0 216 86);
+}
+/* .loginMode a:enabled{
+    border-bottom: 2px solid rgb(0 216 86);
+} */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input[type="email"],
+form input[type="text"],
+form input[type="password"]{
+    width: 20vw;
+    padding: 0.7rem;
+    margin: 0.3rem;
+    border: none;
+    border-radius: 20px;
+}
+#signupbtn{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0 216 86);
+    margin: 1.5rem;
+    font-weight: bolder;
+    width: 10vw;
+    padding: 0.7rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#signupbtn:hover{
+    background-color: rgb(0, 168, 67);
+}
+
+

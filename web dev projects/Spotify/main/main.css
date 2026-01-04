@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 8, 2);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .leftheader,
+.rightheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 550;
+    font-size: 0.8rem;
+}
+
+header #headlogo img {
+    height: 2.5rem;
+    margin: 0 1rem;
+}
+
+header .homebtn {
+    border-radius: 1.2rem;
+    /* text-decoration: none; */
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 51, 13);
+    padding: 0.8rem 1rem;
+    margin: 0 0.5rem;
+    transition: 0.3 ease-in-out;
+}
+
+header .homebtn:hover {
+    background-color: rgb(0, 143, 36);
+}
+
+header #headsearch {
+    width: 20vw;
+    /* margin: 0 1rem; */
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 1.2rem;
+    background-color: rgb(0, 51, 13);
+    color: white;
+}
+
+header input[type="text"]::placeholder {
+    color: rgb(200, 255, 213);
+}
+
+header .premiumbtn {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.2rem;
+    /* text-decoration: none; */
+    transition: 0.3s ease-in-out;
+}
+
+header .premiumbtn:hover {
+    background-color: rgb(128, 255, 159);
+}
+
+header .installbtn {
+    /* text-decoration: none; */
+    color: rgb(137, 189, 150);
+    padding: 0.5rem 1.5rem;
+}
+
+header .installbtn:hover {
+    color: rgb(255, 255, 255);
+}
+
+header .profilebtn {
+    /* text-decoration: none; */
+    background-color: rgb(0 216 86);
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.2rem;
+    margin: 0 1rem;
+}
+
+header .profilebtn:hover {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgb(0, 12, 0); */
+}
+
+main .library {
+    background-color: rgb(0, 24, 0);
+    width: 24vw;
+    /* display: flex; */
+}
+
+main .library header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+main .library .addsongbtn {
+    /* text-decoration: none; */
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.1rem 0.6rem;
+    border-radius: 50%;
+    background-color: rgb(0, 51, 13);
+}
+
+main .library .addsongbtn:hover{
+    background-color: rgb(0, 143, 36);
+}
+
+main .library .librarymode li {
+    list-style: none;
+    display: flex;
+    margin: 1.7rem 0 1.1rem 1rem;
+}
+
+main .library .librarymode a {
+    font-size: 0.8rem;
+    background-color: rgb(0, 51, 13);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+}
+
+main .library .librarymode a:hover{
+    background-color: rgb(0, 143, 36);
+}
+
+.playlistsearching {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.playlistsearch {
+    padding: 6px 8px;
+    border: none;
+    border-radius: 13px;
+    background-color: rgb(0, 51, 13);
+    font-size: 14px;
+    margin: 0 22px;
+}
+
+.playlistsearch::placeholder {
+    color: white;
+}
+
+.playlistfilter {
+    position: relative;
+    display: inline-block;
+}
+
+.playlistfilter>a {
+    background-color: rgb(1, 192, 49);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 17px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.playlistfilter>a:hover {
+    background-color: rgb(0, 155, 39);
+}
+
+.filterdrop {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 51, 13);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.playlistfilter:hover .filterdrop {
+    display: block;
+}
+
+.filterdrop a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.filterdrop a:hover {
+    background-color: rgb(0, 117, 29);
+}
+
+.pl{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+}
+.pl img{
+    height: 50px;
+    margin: 0 10px;
+}
+.pl .plinfo{
+    display: flex;
+    flex-direction: column;
+}
+.pl .plinfo h5{
+    color: rgb(114, 168, 128);
+    margin: 4px 0;
+ }
+
+main .feed {
+    background-color: rgb(0, 24, 0);
+    width: 49vw;
+}
+
+main .feed .feedmode li {
+    list-style: none;
+    display: flex;
+    margin: 1.7rem 0 10px 50px;
+}
+
+main .feed .feedmode a {
+    font-size: 0.8rem;
+    background-color: rgb(0, 51, 13);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+}
+
+main .feed .feedmode a:hover{
+    background-color: rgb(0, 143, 36);
+}
+
+.feed .favpl{
+    height: 35vh;
+    margin: 30px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.favpl .fpl{
+    background-color: rgb(0, 63, 16);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.feed .fpl img{
+    height: 50px;
+    margin: 0 10px 0 0;
+}
+
+.feed h4{
+    margin: 45px 50px;
+    font-weight: 400;
+    color: rgb(160, 187, 167);
+}
+
+.feed h4 span{
+    color: rgb(0, 196, 49);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.suggetions{
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    margin: 0 50px;
+}
+
+.suggetions::-webkit-scrollbar{
+    width: 0px;
+}
+
+.suggetions .spl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggetions .spl img{
+    height: 130px;
+}
+
+main .songinfo {
+    background-color: rgb(0, 24, 0);
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.songinfo h2{
+    margin: 25px 0 0 30px ;
+}
+
+.songinfo img{
+    height: 49vh;
+    margin: 20px 10px;
+}
+
+.songinfo .counts{
+    display: flex;
+    justify-content: space-around;
+}
+
+.songinfo .aboutartist{
+    margin: 20px 30px;
+}
+
+.songinfo .aboutartist h4{
+    padding: 5px 0;
+}
