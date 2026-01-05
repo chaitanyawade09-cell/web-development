@@ -1,0 +1,81 @@
+/* Q.01 */
+*{
+    background-color: wheat;
+}
+
+
+/* Q.02 */
+.poem1{
+    background-color: brown;
+}
+
+
+/* Q.03 */
+body{
+    text-align: center;
+}
+/* OR */
+/* h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.poem1{
+    text-align: center;
+} */
+
+
+/* Q.04 */
+.poem1{
+    color: red;
+}
+h3{
+    color: black;
+}
+
+
+/* Q.05 */
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Q.06 */
+a{
+    color: green;
+    text-decoration: none;
+}
+
+
+/* Q.07 */
+button{
+    background-color: white;
+    color: blueviolet;
+}
+
+
+/* Q.08 */
+textarea::placeholder{
+    color: rgb(0, 0, 255);
+    opacity: 0.5;
+}
+
+
+/* Q.09 */
+.poem1{
+    line-height: 30px;
+}
+
+
+/* Q.10 */
+u{
+    background-color: rgb(255, 238, 0);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+/* Part_A */
+
+/* Q.1 */
+#mainTopic{
+    color: blue;
+}
+
+
+/* Q.02 */
+*{
+    text-align: center;
+}
+
+
+/* Q.03 */
+h1,h3,h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Q.04 */
+.para {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+
+/* Q.5 */
+.feedback button{
+    background-color: purple;
+    color: azure;
+}
+
+
+/* Part_B */
+
+/* Q.01 */
+.feedback button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+
+/* Q.02 */
+p:nth-of-type(2n+1){
+    color: yellow;
+}
+
+
+/* Q.03 */
+h1::first-letter{
+    color: red;
+}
+
+
+/* Q.04 */
+#yes:checked + label{
+    color: darkgreen;
+}
+

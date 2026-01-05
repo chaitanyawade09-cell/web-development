@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1, .container2 {
+    height: 100vh;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 2px;
+    margin: 100px 0;
+}
+
+.container1 div, .container2 div {
+    background-color: pink;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+/* Q.1 */
+.container1 .header{
+    grid-column: 1 / span 12;
+}
+
+.container1 .sidebar{
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 10;
+}
+
+.container1 .navigation{
+    grid-column: 4 / span 6;
+}
+
+.container1 .main{
+    grid-column: 4 / span 6;
+    grid-row: 3 / span 9;
+}
+
+.container1 .ads{
+    grid-column: 10 / span 3;
+    grid-row: 2 / span 10;
+}
+
+.container1 .footer{
+    grid-column: 1 / span 12;
+}
+
+
+
+/* Q.2 */
+.container2 .header {
+    grid-column: 1 / span 12;
+}
+
+.container2 .navigation{
+    grid-column: 1 / span 12;
+}
+
+.container2 .sidebar{
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 9;
+}
+
+.container2 .main{
+    grid-column: 4 / span 9;
+    grid-row: 3 / span 9;
+}
+
+.container2 .ads{
+    grid-column: 1 / span 3;
+}
+
+.container2 .footer{
+    grid-column: 4 / span 9;
+}
+
+
+
+/* Q.3 */
+.loader{
+    height: 120px;
+    width: 120px;
+    margin: 25%;
+    border: 16px solid black;
+    border-top: 16px solid pink;
+    border-radius: 50%;
+    justify-self: center;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

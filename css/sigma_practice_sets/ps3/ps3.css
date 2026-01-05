@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: grey;
+}
+.box{
+    height: 150px;
+    width: 300px;
+    border: 5px dotted black;
+    margin: 20px 1em 40px 2rem;
+    padding: 1em;
+}
+.first, .second, .third{
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-flex;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+li{
+    display: inline-flex;
+    margin: 0px 1rem;
+    padding: 0.1rem 0.3rem;
+    border: 1px solid black;
+}
