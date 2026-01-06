@@ -27,3 +27,5 @@ const premiumItems = inventory.filter(function (item) {
 })
 
 console.log('Premium Items : ', premiumItems);
+
+// end
