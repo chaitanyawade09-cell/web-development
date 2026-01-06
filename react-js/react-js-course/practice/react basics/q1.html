@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+</head>
+<body>
+    <div class="js-container-1"></div>
+    <div class="js-container-2"></div>
+    <div class="js-container-3"></div>
+
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script type="text/babel">
+        const shippingCost = 10, productCost = 30;
+        const cost = (
+            <div>
+                <div class="shippingCost">Shipping cost = ${shippingCost}</div> 
+                <div class="productCost">Product cost = ${productCost}</div>
+                <div class="total">Total cost = ${shippingCost + productCost}</div>
+                <button>Place order</button>
+            </div>
+        );
+        const container_1 = document.querySelector('.js-container-1')
+        ReactDOM.createRoot(container_1).render(cost)
+        
+        const todayDate = (
+            <div>
+                Today is {dayjs().format('MMMM D')}
+            </div>
+        );
+        const container_2 = document.querySelector('.js-container-2')
+        ReactDOM.createRoot(container_2).render(todayDate)
+
+        function LiveTimeElement() {
+            return (
+                <div>
+                    Current time is {dayjs().format('HH:mm:ss')}
+                </div>
+            );
+        }
+        setInterval(() => {
+            root.render(<LiveTimeElement />);
+        }, 1000);
+        const container_3 = document.querySelector('.js-container-3');
+        const root = ReactDOM.createRoot(container_3);
+        root.render(<LiveTimeElement />);
+        
+    </script>
+</body>
+</html>
