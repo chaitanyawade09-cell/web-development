@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function Greet() {
+            return <>
+                <p>Hello, Welcome to my website</p>
+            </>
+        }
+
+        function InputEmail() {
+            return (
+                <>
+                    <input type="email" placeholder = "Email" /> <br/>
+                    <input type="password" placeholder = "Password" />
+                </>
+            )
+        }
+
+        function Profilebtn() {
+            return <>
+                <button>Login</button>
+                <button>Sign in</button>
+                </>
+        }
+
+        function ItemDetails({ItemName, ItemPrice, DiscountPrice}){
+            return(
+                <>
+                    <h2>{ItemName}</h2>
+                    {DiscountPrice ? (<>
+                        <h3><del>Price : ${ItemPrice}</del></h3>
+                        <h3>Discount Price : ${DiscountPrice}</h3>
+                        </>) 
+                        : <h3>Price : ${ItemPrice}</h3>
+                    }
+                    <button>Add to cart</button>
+                </>
+            )
+        }
+
+        function App(){
+            return (
+                <>
+                    <Greet/> <br/>
+                    <InputEmail/> <br/>
+                    <Profilebtn/>
+                    <ItemDetails ItemName = 'Tennis ball' ItemPrice = '6.00' DiscountPrice ='5.50'/>
+                    <ItemDetails ItemName = 'Plain T-shirt' ItemPrice = '7.99'/>
+                </>
+            )
+        }
+
+        const container = document.querySelector('.container')
+        ReactDOM.createRoot(container).render(<App/>)
+
+    </script>
+</body>
+</html>
