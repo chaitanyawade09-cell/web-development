@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+
+<body>
+    <div class="js-container-1"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        
+        function ClickCounter() {
+            const [count, setCount] = React.useState(0)
+
+            function IncreaseCount() {
+                setCount(count + 1)
+            }
+
+            function Reset() { 
+                setCount(0)
+            }
+ 
+            return (
+                <>
+                    <button onClick={IncreaseCount}>
+                        Clicked {count} {count === 1 ? 'time' : 'times'}
+                    </button>
+                    <button onClick ={Reset}>Reset</button>
+                </>
+            )
+        }
+
+        function InputTexts() {
+            const [InputText, SetInputText] = React.useState('')
+            
+            function SaveInputText(event) {
+                SetInputText(event.target.value)
+            }
+            
+            function Reset() {
+                SetInputText('')
+            }
+
+            function Example() {
+                SetInputText('bla bla bla...')
+            }
+
+            return(
+                <>
+                    <input type="text" onChange = {SaveInputText} value = {InputText} placeholder = "Enter any text here" />
+                    <button onClick = {Reset}>Reset</button>
+                    <button onClick = {Example}>Example</button>
+                    <p>Inputed Text : {InputText}</p>
+                </>
+            )
+        }
+
+        function App() {
+            const [count, setCount] = React.useState(0)
+
+            function IncreaseCount() {
+                setCount(count + 1)
+            }
+
+            function Reset() { 
+                setCount(0)
+            }
+ 
+            return (
+                <>  
+                    <ClickCounter />
+                    <ClickCounter />
+                    <br /><br />
+                    <button onClick={IncreaseCount}>
+                        Clicked {count} {count === 1 ? 'time' : 'times'}
+                    </button>
+                    <button onClick={IncreaseCount}>
+                        Clicked {count} {count === 1 ? 'time' : 'times'}
+                    </button>
+                    <button onClick ={Reset}>Reset</button>
+                    <br /><br />
+                    <InputTexts />
+                </>
+            )
+        }
+
+        const container = document.querySelector('.js-container-1')
+        ReactDOM.createRoot(container).render(<App />)
+
+    </script>
+</body>
+
+</html>
