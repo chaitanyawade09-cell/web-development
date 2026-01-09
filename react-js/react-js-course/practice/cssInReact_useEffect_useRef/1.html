@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .On {
+            background-color: rgb(0, 255, 34);
+            border: none;
+            padding: 5px 10px;
+            margin: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        .Off {
+            background-color: rgb(255, 0, 0);
+            border: none;
+            padding: 5px 10px;
+            margin: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        .LoginPage {
+            justify-self: end;
+            margin: 0 20px;
+        }
+
+        .Greet {
+            font-size: 30px;
+            margin: 15px 0;
+        }
+
+        .InputUser {
+            border: none;
+            width: 250px;
+            padding: 10px;
+            margin: 10px 10px 10px 0;
+            border-radius: 8px;
+        }
+
+        .Privacybtn,
+        .Login {
+            border: none;
+            background-color: rgb(0, 157, 255);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .Login {
+            margin: 10px 10px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function OnOff() {
+            const [clicked, Setclicked] = React.useState(true)
+            function Change() {
+                Setclicked(!clicked)
+            }
+
+            return (
+                <>
+                    <button className={clicked === true ? "On" : "Off"} onClick={Change} >{clicked === true ? 'ON' : 'OFF'}</button>
+                </>)
+        }
+
+        function LoginPage() {
+            const [privacy, Setprivacy] = React.useState(true)
+
+            function Privacy() {
+                Setprivacy(!privacy)
+            }
+
+            return (
+                <div className="rignt">
+                    <div className="LoginPage">
+                        <p className="Greet">Hello, Welcome to my website</p>
+                        <input className="InputUser" type="email" placeholder="Email" /> <br />
+                        <input className="InputUser" type={privacy === true ? "password" : "text"} placeholder="Password" />
+                        <button className="Privacybtn" onClick={Privacy}>{privacy === true ? 'Show' : 'Hide'}</button><br />
+                        <button className="Login">Login</button>
+                        <button className="Login">Sign in</button>
+                    </div>
+                </div>
+            )
+        }
+
+        function Time() {
+            const [time, SetTime] = React.useState(dayjs().format('HH:mm:ss'))
+            React.useEffect(() => {
+                setInterval(() => {
+                    SetTime(dayjs().format('HH:mm:ss'))
+                }, 1000)
+            }, [])
+            return (
+                <>
+                    <p>Current Time : {time}</p>
+                </>
+            )
+        }
+
+        function Clicker() {
+            const [count, setCount] = React.useState(0)
+            const intervalRef = React.useRef(null);
+
+            function IncreaseCount() {
+                setCount(count + 1)
+            }
+
+            function Reset() {
+                setCount(0)
+            }
+
+            function AutoClick() {
+                if (intervalRef.current !== null) return;
+                setInterval(() => {
+                    setCount(prev => prev + 1)
+                }, 1000)
+            }
+
+            return (
+                <>
+                    <button onClick={IncreaseCount}>
+                        Clicked {count} {count === 1 ? 'time' : 'times'}
+                    </button>
+                    <button onClick={Reset}>Reset</button>
+                    <button onClick={AutoClick}>Auto Click</button>
+
+                </>
+            )
+        }
+
+        function App() {
+            return (
+                <>
+                    <OnOff />
+                    <LoginPage />
+                    <Time />
+                    <Clicker />
+                </>)
+        }
+
+        const container = document.querySelector('.container')
+        ReactDOM.createRoot(container).render(<App />)
+    </script>
+
+</body>
+
+</html>
