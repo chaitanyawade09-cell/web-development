@@ -209,12 +209,3 @@
 * Inside `displayData()`, use the `await` keyword to wait for the result of `fetchUserData()`.
 * Store the result in a variable and `console.log` it.
 * Call `displayData()`.
-
-
-
-
-3. **Conceptual Understanding**
-* **Goal:** Articulate the practical benefit of Promises and `async`/`await`.
-* **Instructions:**
-* Above the `displayData()` function from Problem 2, write a multi-line code comment.
-* In the comment, explain in your own words what **Callback Hell** is (the problem that used to happen with nested callbacks) and how Promises (and subsequently `async`/`await`) fixed that problem.
