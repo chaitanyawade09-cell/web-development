@@ -1,0 +1,7 @@
+.Message {
+  background-color: rgb(42, 39, 47);
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  word-wrap: break-word;
+  overflow: auto;
+}
